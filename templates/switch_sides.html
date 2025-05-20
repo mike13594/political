@@ -1,0 +1,28 @@
+{% extends "_base.html" %}
+{% block head-content %}
+
+{% endblock %}
+{% block body-content %}
+
+<form class="w3-container w3-card-4 w3-light-grey">
+    <br />
+    <br />
+    <br />
+    <h2>정치적 성향 입히기</h2>
+    <p>정치적 성향을 주고 싶은 기사를 입력하세요.</p>
+  
+    <p><label>Article</label></p>
+    <textarea class="w3-input w3-border" cols="5" rows="10" name="text" type="text" required></textarea>
+
+    <div class="test on_off-loc">
+        <h4 class="radio_name">선택 성향</h4>
+        {{ onoffform.on_off }}
+    </div>
+    <input class="w3-button w3-round-xlarge w3-grey" type="submit">
+
+</form>
+
+
+
+
+{% endblock %}

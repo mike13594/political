@@ -1,0 +1,36 @@
+{% extends "_base.html" %}
+{% block head-content %}
+
+{% endblock %}
+{% block body-content %}
+
+
+
+<form class="w3-container w3-card-4 w3-light-grey">
+
+    <br />
+    <br />
+    <br />
+    <h2>정치적 성향 분석기</h2>
+    <p>정치적 성향을 알고 싶은 기사를 입력하세요.</p>
+  
+    <p><label>Article</label></p>
+    <textarea class="w3-input w3-border" cols="5" rows="10" name="text" type="text" required></textarea>
+
+    <input class="w3-button w3-round-xlarge w3-grey" type="submit">
+
+</form>
+
+<hr class="hr-1">
+<div class="name-header">
+<h3><span
+    {% if politic_side == '우파' %}
+        style="color:rgb(0, 0, 221)"
+    {% elif politic_side == '좌파' %}
+        style="color:rgb(236, 0, 0)"
+    {% endif %}
+    >{{ classify }}</span></h3>
+</div>
+
+
+{% endblock %}
